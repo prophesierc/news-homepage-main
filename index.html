@@ -5,56 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/index.css">
+  <script defer src="./scripts/index.js"></script>
   
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
+  <main>
+    <div class="main-container">
+      <button class="navbar-closed-icon"></button>
+      <button class="navbar-opened-icon"></button>
+      <div class="navbar-container-open">
+        <button id="navbar-home">Home</button>
+        <button id="navbar-new">New</button>
+        <button id="navbar-popular">Popular</button>
+        <button id="navbar-trending">Trending</button>
+        <button id="navbar-categories">Categories</button>
+      </div>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+      <h1 id="title">The Bright Future of Web 3.0?</h1>
 
-  The Bright Future of Web 3.0?
+      <p id="intro-content">
+        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?
+      </p>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+      <button id="read-more-button">Read more</button>
 
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
+      <div class="new-content-container">
+        <h2 id="new-content-title">New </h2>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <h3 id="h3-section-title">Hydrogen VS Electric Cars</h3>
+        <p id="h3-child-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+  
+        <h4 id="h4-section-title">The Downsides of AI Artistry</h4>
+        <p id="h4-child-text">What are the possible adverse effects of on-demand AI image generation?</p>
+  
+        <h5 id="h5-section-title">Is VC Funding Drying Up?</h5>
+        <p id="h5-child-text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+
+      <div class="external-article-container">
+        <p id="01-title">01</p>
+        <p id="01-content">Reviving Retro PCs</p>
+        <p id="01-text">What happens when old PCs are given modern upgrades?</p>
+  
+        <p id="02-title">02</p>
+        <p id="02-content">Top 10 Laptops of 2022</p>
+        <p id="02-text">Our best picks for various needs and budgets.</p>
+  
+        <p id="03-title">03</p>
+        <p id="03-content">The Growth of Gaming</p>
+        <p id="03-text">How the pandemic has sparked fresh opportunities.</p>
+      </div>
+      
+      <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div> -->
+    </div>
+  </main>
 </body>
 </html>
