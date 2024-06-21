@@ -48,13 +48,13 @@ main {
 /* Mobile Navbar Modal */
 @keyframes openModal
 {
-    0% { opacity: 0; display: none; }
-    100% { opacity: 1; display: flex; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 @keyframes closeModal
 {
-    100% { opacity: 1; display: flex; }
-    0% { opacity: 0; display: none; }
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 #header-logo-icon {
@@ -72,7 +72,7 @@ main {
     background-repeat: no-repeat;
     background-color: transparent;
     position: absolute;
-    right: 3vw;
+    right: 5vw;
     width: 40px;
     height: 19px;
     background-image: url('../assets/images/icon-menu.svg');
@@ -89,30 +89,35 @@ main {
 }
 
 .navbar-modal {
-    border: 1px solid var(--clr-off-white);
-    display: flex;
+    border: 1px solid var(--clr-off-white);    
     background-color: var(--clr-off-white);
     position: absolute;    
     height: 100vh;
     width: 75%;
     top: 50%;
     left: 70%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);    
+}
+.navbar-modal::backdrop {
+    background-color: transparent;
+    /* may prevent click events? */
 }
 
-.navbar-modal:not([open]) {
-    display: none;
+.navbar-modal:not([open]) {    
+    display: none;    
 }
 
 .navbar-modal[open] {
-    animation: openModal 500ms linear
+    animation: openModal 500ms forwards;    
+}
+.navbar-modal[closing] {
+    animation: closeModal 500ms forwards;
 }
 
 .navbar-item-container {
     display: flex;
     flex-direction: column;
     margin: 8em 0 0 0;
-    width: 100%;
 }
 
 .navbar-item-container button {
@@ -128,7 +133,7 @@ main {
 /* Main Container */
 .main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .main-container #title {
