@@ -4,6 +4,11 @@ class Page
     {
         this.init()
     }
+    
+    init()
+    {
+        this.modal()
+    }
 
     modal()
     {        
@@ -13,16 +18,13 @@ class Page
 
         openedIcon.onclick = () => 
         {
-            modal.show();
+            modal.showModal();
         }
         closedIcon.onclick = () => 
         {
             modal.close();
         }
     }
-    init()
-    {
-        this.modal()
-    }
+    
 }
 const page = new Page();
