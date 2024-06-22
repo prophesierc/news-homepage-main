@@ -7,9 +7,9 @@ class Page
 
     modal()
     {
-        const modal = document.querySelector('.navbar-modal');
-        const openedIcon = document.querySelector('#navbar-opened-hamburger-icon');
-        const closedIcon = document.querySelector('#navbar-closed-x-icon');
+        const modal = document.querySelector('.mobile-navbar-modal');
+        const openedIcon = document.querySelector('#mobile-navbar-opened-hamburger-icon');
+        const closedIcon = document.querySelector('#mobile-navbar-closed-x-icon');
 
         openedIcon.onclick = () => 
         {

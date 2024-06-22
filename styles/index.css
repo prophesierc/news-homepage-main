@@ -65,7 +65,7 @@ main {
     margin-bottom: 3em;
 }
 
-#navbar-opened-hamburger-icon {
+#mobile-navbar-opened-hamburger-icon {
     border: 1px solid transparent;
     margin-top: 1em;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@ main {
     background-image: url('../assets/images/icon-menu.svg');
 }
 
-#navbar-closed-x-icon {
+#mobile-navbar-closed-x-icon {
     top: 2.5vh;
     right: 3vw;
     position: absolute;
@@ -87,7 +87,7 @@ main {
     background-repeat: no-repeat;
 }
 
-.navbar-modal {
+.mobile-navbar-modal {
     border: 1px solid var(--clr-off-white);    
     background-color: var(--clr-off-white);
     height: 110vh; /* needed to prevent any gap in navbar */
@@ -97,7 +97,7 @@ main {
     position: fixed;
 }
 
-.navbar-modal::backdrop {
+.mobile-navbar-modal::backdrop {
     background-color: transparent;
     /* may prevent click events when modal is open?? */
 }
@@ -106,20 +106,20 @@ main {
     overflow-y: hidden;
 }
 
-.navbar-modal[open] {
+.mobile-navbar-modal[open] {
     animation: openModal 0.3s ease forwards;    
 }
-.navbar-modal[closing] {
+.mobile-navbar-modal[closing] {
     animation: closeModal 0.3s ease forwards;
 }
 
-.navbar-item-container {
+.mobile-navbar-item-container {
     display: flex;
     flex-direction: column;
-    margin-top: 13em;
+    margin-top: 10em;
 }
 
-.navbar-item-container li {
+.mobile-navbar-item-container li {
     list-style-type: none;
     font-family: var(--ff-Inter);
     font-size: var(--fs);
@@ -130,6 +130,9 @@ main {
     border: 1px solid transparent;
 }
 
+nav{
+    display: none;
+}
 /* Main Container */
 .main-container {
     display: flex;
@@ -255,19 +258,31 @@ main {
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1000px){
+/* removes mobile headers and navbar */
 
-    #navbar-opened-hamburger-icon{
+    .mobile-navbar-modal{
+        display: none;
+    }
+    #mobile-navbar-opened-hamburger-icon{           
+        display: none;
+    }
+/* enables desktop header and navbar */
+    main{
+        margin: 5em 5em 0 5em;
+        
+    }
+    
+    .desktop-navbar{
         display: flex;
     }
-    .navbar-item-container li{
-        left: 50%;
-        right: 50%;
-        transform: translate(-50% -50%);
-        position: absolute;
-        background-color: red;
+    .desktop-navbar-item-container{
+        display: flex;
+        list-style-type: none;
+        gap: 2em;
+        margin-left: 35vw;
+        
     }
-
     #image-web-3-mobile {
         display: none;
     }
