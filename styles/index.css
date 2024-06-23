@@ -79,8 +79,9 @@ main {
 }
 
 #mobile-navbar-closed-x-icon {
-    top: 1.2rem;
-    right: .8rem;
+    top: -65%;
+    right: -130%;
+    transform: translate(-50% -90%);
     position: absolute;
     width: 35px;
     height: 35px;
@@ -118,7 +119,8 @@ main {
 .mobile-navbar-item-container {
     display: flex;
     flex-direction: column;
-    margin-top: 10em;
+    position: absolute;
+    top: 11em;
 }
 
 .mobile-navbar-item-container li {
