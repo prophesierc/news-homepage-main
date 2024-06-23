@@ -79,8 +79,8 @@ main {
 }
 
 #mobile-navbar-closed-x-icon {
-    top: -50%;
-    right: -130%;
+    top: -52%;
+    right: -120%;
     transform: translate(-50% -90%);
     position: absolute;
     width: 35px;
@@ -92,8 +92,8 @@ main {
 .mobile-navbar-modal {
     border: 1px solid var(--clr-off-white);    
     background-color: var(--clr-off-white);
-    height: 110vh; /* needed to prevent any gap in navbar */
-    width: 65vw;
+    height: 50em; /* needed to prevent any gap in navbar */
+    width: 16em;
     top: 55%;
     transform: translate(-50%, -50%);    
     position: fixed;
