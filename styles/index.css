@@ -63,6 +63,7 @@ main {
     border: 1px solid transparent;
     background-image: url('../assets/images/logo.svg');
     margin-bottom: 3em;
+    float: left;
 }
 
 #mobile-navbar-opened-hamburger-icon {
@@ -130,6 +131,12 @@ main {
     border: 1px solid transparent;
 }
 
+.mobile-navbar-item-container li:hover,
+.mobile-navbar-item-container li:active{
+    color: var(--clr-soft-red);
+    cursor: pointer;
+}
+
 nav{
     display: none;
 }
@@ -145,7 +152,7 @@ nav{
 
 .main-container #title {
     font-weight: var(--fw-700);
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1em;
     margin: .25em 0 .25em 0;
 }
@@ -160,9 +167,9 @@ nav{
 
 .main-container #read-more-button {
     width: 50%;
-    height: 4em;
+    height: 5em;
     font-weight: var(--fw-800);
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: .4em;
     background-color: var(--clr-soft-red);
     border: 1px solid var(--clr-soft-red);
@@ -170,11 +177,19 @@ nav{
     margin-bottom: 5em;
 }
 
+.main-container #read-more-button:active,
+.main-container #read-more-button:hover{
+    background-color: var(--clr-very-dark-blue);
+    border: 1px solid var(--clr-very-dark-blue);
+    color: var(--clr-off-white);
+    cursor: pointer;
+}
+
 /* New Content Container */
 .new-content-container {
     background-color: var(--clr-very-dark-blue);
     padding: 1.5em;
-    margin-bottom: 3em;
+    margin-bottom: 4.5em;
 }
 
 .new-content-container #new-content-title {
@@ -183,10 +198,16 @@ nav{
     padding: 0 0 1em 0;
 }
 
-.new-content-container h3, h4, h5 {
+h3, h4, h5 {
     color: var(--clr-off-white);
     font-weight: var(--fw-700);
     font-size: 20px;
+}
+
+h3:hover, h4:hover, h5:hover,
+h3:active, h4:active, h5:active{
+    color: var(--clr-soft-orange);
+    cursor: pointer;
 }
 
 .new-content-container hr {
@@ -210,7 +231,7 @@ nav{
     font-weight: var(--fw-400);
 }
 
-/* External Article Container */
+/* Main gallery article Container */
 .external-article-container {
     margin-bottom: 2em;
 }
@@ -222,7 +243,7 @@ nav{
 }
 
 .gallery-container .gallery-image {
-    width: 33%;
+    width: 30%;
     margin-right: 2.2em;
     min-height: 8em;
 }
@@ -238,7 +259,11 @@ nav{
     font-weight: var(--fw-800);
     font-size: 17px;
 }
-
+.gallery-container .gallery-content:hover,
+.gallery-container .gallery-content:active{
+    color: var(--clr-soft-red);
+    cursor: pointer;
+}
 .gallery-container .gallery-text {
     color: var(--clr-dark-grayish-blue);
     font-size: 14px;
@@ -260,16 +285,6 @@ nav{
 
 @media screen and (min-width: 1000px) {
 
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    main{
-        max-width: 1200px;
-        max-height: 800px;
-    }
-
     /* Removes mobile headers and navbar */
     .mobile-navbar-modal {
         display: none;
@@ -277,37 +292,71 @@ nav{
     #mobile-navbar-opened-hamburger-icon {
         display: none;
     }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    
+    }
+    main{
+        max-width: 1200px;
+    }
     
     /* Enables desktop header and navbar */
+    
+    .header-container{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        margin-top: 1em;
+    }
+
     .desktop-navbar {
         display: flex;
-        padding-left: 25em;
+        margin-bottom: 1.5rem;
     }
+
     .desktop-navbar-item-container {
         display: flex;
         list-style-type: none;
+        gap: 3em;    
+    }
+
+    .desktop-navbar-item-container li:hover,
+    .desktop-navbar-item-container li:active{
+        color: var(--clr-soft-red);
+        cursor: pointer;
+    }
+
+    #image-web-3-mobile {
+        display: none;
+    }
+
+    #image-web-3-desktop {
+        display: flex;
+        width: 100%;
+        height: 35vh;
     }
     
     .main-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         grid-template-rows: auto auto auto; 
-        
     }
 
     .main-container #title {
         grid-column: 1 / 2; 
         grid-row: 2 / 3;    
-        padding-right: 1em;
-        padding-bottom: 1em;
-        font-size: 60px;
+        padding-bottom: 2em;
+        font-size: 50px;
     }
 
     .main-container #intro-content {
         grid-column: 2 / 3; 
         grid-row: 2 / 3;
         padding-right: 4em;
-        padding-top: 1em;
+        padding-top: 1.5em;
     }
 
     .main-container #read-more-button {
@@ -323,54 +372,74 @@ nav{
         margin-right: 2em;
     }
 
-    #image-web-3-mobile {
-        display: none;
-    }
-
-    #image-web-3-desktop {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-    }
-
     .new-content-container {
         grid-column: 3 / 4; 
         grid-row: 1 / 3;
     }
+
     .new-content-container p{
-        margin-right: 4em;
+        margin-right: 5em;
     }
 
     .external-article-container {
+        display: flex;
         grid-column: 1 / 4;
         grid-row: 3 / 4;    
-        display: flex;
-        justify-content: space-between;
-        gap: 2em;
     }
 
-    .gallery-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .gallery-container{
+        height: 1em;
+        margin: 0 0 10em 0;
+    }
+    
+    .gallery-image{
+        height: 1em;
+    }
+    .attribution { 
+        grid-column: 2 / 3; 
+        grid-row: 4 / 4;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body{
+        height: 100vh;
+        overflow-y: hidden;
     }
 
-    .gallery-container .gallery-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1em;
+    .header-container{
+        margin-top: -7em;
     }
 
-    .gallery-container .inner-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .new-content-container {
+        height: 90%;
     }
 
-    .attribution {
-        grid-column: 1 / 4; 
-        text-align: center;
-        margin-top: 2em;
+    .main-container #title {
+        font-size: 60px;
+        margin-bottom: -1em;
     }
+
+    .main-container #read-more-button {
+        margin-bottom: 6em;
+    }
+    
+    .gallery-container{
+        width: 50%;
+        height: 1em;
+        margin: 0 4em 0 -3em;
+        padding: 0 0 0 3em ;        
+    }
+
+    .attribution { 
+        position: absolute;
+        writing-mode: vertical-rl;
+        margin-left: -1em;
+    }
+    
+    .attribution a{ 
+        text-decoration: none;
+    }
+
 }
