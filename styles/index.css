@@ -72,14 +72,14 @@ main {
     background-repeat: no-repeat;
     background-color: transparent;
     position: absolute;
-    right: 1rem;
+    right: 5vw;
     width: 40px;
     height: 19px;
     background-image: url('../assets/images/icon-menu.svg');
 }
 
 #mobile-navbar-closed-x-icon {
-    top: -65%;
+    top: -50%;
     right: -130%;
     transform: translate(-50% -90%);
     position: absolute;
@@ -111,7 +111,6 @@ main {
 .mobile-navbar-modal[open] {
     animation: openModal 0.3s ease forwards;    
 }
-
 .mobile-navbar-modal[closing] {
     animation: closeModal 0.3s ease forwards;
 }
