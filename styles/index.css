@@ -93,10 +93,11 @@ main {
     border: 1px solid var(--clr-off-white);    
     background-color: var(--clr-off-white);
     height: 50em; /* needed to prevent any gap in navbar */
-    width: 16em;
+    width: 100%;
     top: 55%;
-    transform: translate(-50%, -50%);    
+    transform: translate(-28%, -50%);    
     position: fixed;
+    z-index: 1;
 }
 
 .mobile-navbar-modal::backdrop {
@@ -150,6 +151,10 @@ nav{
 
 #image-web-3-desktop{
     display: none;
+}
+
+.cover-image-container img {
+    max-width: 100%; 
 }
 
 .main-container #title {
